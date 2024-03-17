@@ -54,7 +54,7 @@ func main() {
 		}
 
 		w.Header().Set("Content-Type", "text/html")
-		if err := views.ExecuteTemplate(w, "home", resp); err != nil {
+		if err := views.ExecuteTemplate(w, "index", resp); err != nil {
 			log.Println("failed to run GET /:", err)
 		}
 	})
