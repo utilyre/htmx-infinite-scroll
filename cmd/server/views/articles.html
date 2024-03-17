@@ -1,0 +1,55 @@
+{{define "articles"}}
+<!-- -->
+{{range .Articles}} {{template "article" .}} {{end}}
+<!-- -->
+{{if .NextPage}}
+<div
+  hx-get="/articles?page={{.NextPage}}"
+  hx-trigger="revealed"
+  hx-swap="outerHTML"
+>
+  Loading...
+</div>
+{{end}}
+<!-- -->
+{{end}}
+
+<!-- -->
+
+{{define "article"}}
+<article>
+  <h2>{{.Title}}</h2>
+
+  <p>
+    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
+    tempor incididunt ut labore et dolore magna aliqua. Faucibus in ornare quam
+    viverra orci sagittis eu volutpat odio. Senectus et netus et malesuada fames
+    ac. Faucibus et molestie ac feugiat sed lectus vestibulum. Arcu dictum
+    varius duis at. Ut diam quam nulla porttitor massa id. Scelerisque varius
+    morbi enim nunc faucibus a. Sed felis eget velit aliquet. Ac turpis egestas
+    sed tempus urna. Morbi tincidunt augue interdum velit euismod in
+    pellentesque massa. Sit amet nisl purus in mollis nunc sed id semper.
+    Ullamcorper eget nulla facilisi etiam dignissim diam. In nisl nisi
+    scelerisque eu ultrices vitae. Cras tincidunt lobortis feugiat vivamus at
+    augue. Nam aliquam sem et tortor.
+  </p>
+
+  <p>
+    Dignissim cras tincidunt lobortis feugiat vivamus at augue eget arcu. Arcu
+    non sodales neque sodales ut etiam sit amet. Sagittis eu volutpat odio
+    facilisis mauris sit amet massa. Penatibus et magnis dis parturient.
+    Adipiscing vitae proin sagittis nisl rhoncus mattis rhoncus. Integer eget
+    aliquet nibh praesent tristique. Platea dictumst vestibulum rhoncus est
+    pellentesque elit ullamcorper dignissim. Viverra adipiscing at in tellus
+    integer feugiat scelerisque. Bibendum enim facilisis gravida neque convallis
+    a cras. Dignissim sodales ut eu sem integer vitae justo eget. Erat
+    pellentesque adipiscing commodo elit at imperdiet dui. Enim neque volutpat
+    ac tincidunt vitae semper quis lectus nulla. Lacinia at quis risus sed
+    vulputate odio. Faucibus in ornare quam viverra orci sagittis eu. Sem
+    viverra aliquet eget sit amet tellus cras. Nulla facilisi etiam dignissim
+    diam quis enim lobortis scelerisque fermentum. Nec tincidunt praesent semper
+    feugiat nibh sed pulvinar. Eu volutpat odio facilisis mauris sit amet massa
+    vitae.
+  </p>
+</article>
+{{end}}

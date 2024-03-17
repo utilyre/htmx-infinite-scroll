@@ -1,0 +1,22 @@
+{{define "home"}}
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <script
+      src="https://unpkg.com/htmx.org@1.9.11"
+      integrity="sha384-0gxUXCCR8yv9FM2b+U3FDbsKthCI66oH5IA9fHppQq9DDMHuMauqq1ZHBpJxQ0J0"
+      crossorigin="anonymous"
+    ></script>
+
+    <title>HTMX Infinite Scroll</title>
+  </head>
+
+  <body>
+    <h1>HTMX Infinite Scroll</h1>
+    <section>{{template "articles" .ArticlesView}}</section>
+  </body>
+</html>
+{{end}}
